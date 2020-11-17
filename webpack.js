@@ -23,6 +23,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      "ophan/ng": path.resolve(__dirname, "./src/ophanReplaced.js"),
+    },
+  },
   plugins: [
     // https://webpack.js.org/plugins/normal-module-replacement-plugin/
     new webpack.NormalModuleReplacementPlugin(
@@ -32,3 +37,15 @@ module.exports = {
   ],
   mode: "development",
 };
+
+//frontend/webpack.config.dcr.js
+// module.exports = webpackMerge.smart(config, {
+//   output: {
+//       path: path.join(__dirname, 'static', 'target', 'javascripts'),
+//   },
+//   resolve: {
+//   alias: {
+//     "ophan/ng": path.resolve(__dirname, "./src/ophanReplaced.js"),
+//   },
+// },
+// });

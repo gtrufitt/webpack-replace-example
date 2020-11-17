@@ -19,21 +19,21 @@
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ophan_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ophan.js */ \"./src/ophan.js\");\n;\n(0,_ophan_js__WEBPACK_IMPORTED_MODULE_0__.record)();\n\n//# sourceURL=webpack://vanilla/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var ophan_ng__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ophan/ng */ \"./src/ophanReplaced.js\");\n// import { record } from \"./ophan.js\";\n// record();\n// Replace this import\n// FROM: ophan-tracker-js\n// TO: A simple object containing functions that are called within Frontend\n;\nophan_ng__WEBPACK_IMPORTED_MODULE_0__.default.record(\"blah\"); // { record: (value) => window.guardian.ophan.record(value) }\n// window.guardian.ophan.record('blah')\n\n//# sourceURL=webpack://vanilla/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/ophan.js":
-/*!**********************!*\
-  !*** ./src/ophan.js ***!
-  \**********************/
+/***/ "./src/ophanReplaced.js":
+/*!******************************!*\
+  !*** ./src/ophanReplaced.js ***!
+  \******************************/
 /*! namespace exports */
-/*! export record [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"record\": () => /* binding */ record\n/* harmony export */ });\nvar record = function record() {\n  return console.log(\"Ophan Replace Record\");\n};\n\n//# sourceURL=webpack://vanilla/./src/ophan.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  record: function record(value) {\n    if (window.guardian.ophan.record) {\n      window.guardian.ophan.record(value);\n    }\n  }\n});\n\n//# sourceURL=webpack://vanilla/./src/ophanReplaced.js?");
 
 /***/ })
 
